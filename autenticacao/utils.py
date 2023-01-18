@@ -2,13 +2,25 @@ import re
 from django.contrib import messages
 from django.contrib.messages import constants
 
-def password_is_valid(request, password, confirm_password):
+def password_is_valid(request, username, email, password, confirm_password):
     if len(password) < 6:
         messages.add_message(request, constants.ERROR, 'Sua senha deve conter 6 ou mais caractertes')
         return False
 
     if not password == confirm_password:
         messages.add_message(request, constants.ERROR, 'As senhas não coincidem!')
+        return False
+    
+    if not username or username.strip() == '':
+        messages.add_message(request, constants.ERROR, 'Preencha o seu nome!')
+        return False
+    
+    if not email or email.strip() == '':
+        messages.add_message(request, constants.ERROR, 'Preencha o seu email!')
+        return False
+    
+    if not password or password.strip() == '':
+        messages.add_message(request, constants.ERROR, 'Preencha a sua senha!')
         return False
     
     if not re.search('[A-Z]', password):
