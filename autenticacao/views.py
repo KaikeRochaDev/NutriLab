@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .utils import password_is_valid, email_html
 from django.shortcuts import redirect
 from django.contrib.auth.models import User
@@ -15,7 +14,7 @@ from django.shortcuts import get_object_or_404
 def cadastro(request):
     if request.method == "GET":
         if request.user.is_authenticated:
-            return redirect('/')
+            return redirect('/paciente')
         return render(request, 'cadastro.html')
     elif request.method == "POST":
         username = request.POST.get('usuario')
@@ -48,7 +47,7 @@ def cadastro(request):
 def logar(request):
     if request.method == "GET":
         if request.user.is_authenticated:
-            return redirect('/')
+            return redirect('/pacientes')
         return render(request, 'logar.html')
     elif request.method == "POST":
         username = request.POST.get('usuario')
@@ -61,7 +60,7 @@ def logar(request):
             return redirect('/auth/logar')
         else:
             auth.login(request, usuario)
-            return redirect('/')
+            return redirect('/pacientes')
 
 def sair(request):
     auth.logout(request)
