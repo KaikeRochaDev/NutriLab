@@ -43,39 +43,44 @@
     <br>
 
     <div class="fundo-alimentar">
-        {% for re in refeicao %}
-            <div class="refeicao">
-                <div class="head-refeicao">
-                    <span>{{re.titulo}}</span>
+        {% if not refeicao %}
+            <h3 class='texto-ref'>🍽️ Nenhuma refeição adicionada</h3>
+            <img class='nenhuma-ref' src="{% static 'plataforma/img/frutas1.png'%}" alt="">
+        {% else %}
+            {% for re in refeicao %}
+                <div class="refeicao">
+                    <div class="head-refeicao">
+                        <span>{{re.titulo}}</span>
 
-                    <span style="float: right;">{{re.horario}}h</span>
+                        <span style="float: right;">{{re.horario}}h</span>
 
-                </div>
+                    </div>
 
-                <div class="body-refeicao">
-                    {% for o1 in opcao %}
-                        {% if o1.refeicao == re %}
-                            <div class="opcao">
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <img width="100%" src="{{o1.imagem.url}}"> 
+                    <div class="body-refeicao">
+                        {% for o1 in opcao %}
+                            {% if o1.refeicao == re %}
+                                <div class="opcao">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <img width="100%" src="{{o1.imagem.url}}"> 
+                                        </div>
+
+                                        <div class="col-md-10">
+                                            {{o1.descricao}}
+                                        </div>
+
                                     </div>
-
-                                    <div class="col-md-10">
-                                        {{o1.descricao}}
-                                    </div>
-
                                 </div>
-                            </div>
-                            <br>
-                        {% endif %}
-                    {% endfor %}
+                                <br>
+                            {% endif %}
+                        {% endfor %}
+
+                    </div>
 
                 </div>
-
-            </div>
-            <br>
-        {% endfor %}
+                <br>
+            {% endfor %}
+        {% endif%}
 
     </div>
 

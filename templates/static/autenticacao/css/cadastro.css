@@ -65,5 +65,10 @@
     background-color: #27DB8F;
     color: white;
     font-weight: bold;
+}
 
+.possui-conta{
+    display: flex;
+    margin-top: 25px;
+    font-weight: bold
 }

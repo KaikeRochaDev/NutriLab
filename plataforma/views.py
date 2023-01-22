@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponse, JsonResponse
+from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.messages import constants
@@ -165,7 +165,7 @@ def refeicao(request, id_paciente):
     if not paciente.nutri == request.user:
         messages.add_message(request, constants.ERROR, 'Esse paciente não é seu')
         return redirect('/dados_paciente/')
-
+    
     if request.method == "POST":
         titulo = request.POST.get('titulo')
         horario = request.POST.get('horario')
@@ -179,7 +179,7 @@ def refeicao(request, id_paciente):
                       carboidratos=carboidratos,
                       proteinas=proteinas,
                       gorduras=gorduras)
-
+                   
         r1.save()
 
         messages.add_message(request, constants.SUCCESS, 'Refeição cadastrada')

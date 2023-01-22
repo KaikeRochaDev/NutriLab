@@ -42,7 +42,7 @@ def password_is_valid(request, username, email, password, confirm_password):
     return True
 
 def email_html(path_template: str, assunto: str, para: list, **kwargs) -> dict:
-    
+
     html_content = render_to_string(path_template, kwargs)
     text_content = strip_tags(html_content)
 
