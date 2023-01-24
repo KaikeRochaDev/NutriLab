@@ -8,7 +8,7 @@ from django.conf import settings
 
 def password_is_valid(request, username, email, password, confirm_password):
     if len(password) < 6:
-        messages.add_message(request, constants.ERROR, 'Sua senha deve conter 6 ou mais caractertes')
+        messages.add_message(request, constants.ERROR, 'Sua senha deve conter 6 ou mais caracteres')
         return False
 
     if not password == confirm_password:
