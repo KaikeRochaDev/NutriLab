@@ -50,6 +50,11 @@
 
 }
 
+.caixa{
+    background-color: #D9D9D9;
+    padding: 30px;
+}
+
 @media (max-width: 1300px)
 {
 

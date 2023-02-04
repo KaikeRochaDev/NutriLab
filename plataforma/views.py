@@ -129,7 +129,7 @@ def dados_paciente(request, id):
 
         messages.add_message(request, constants.SUCCESS, 'Dados cadastrado com sucesso')
         
-        return redirect('/dados_paciente/')
+        return redirect(f'/dados_paciente/{id}')
     
     
 @login_required(login_url='/auth/logar/')
