@@ -44,8 +44,7 @@
 
     <div class="fundo-alimentar">
         {% if not refeicao %}
-            <h3 class='texto-ref'>🍽️ Nenhuma refeição adicionada</h3>
-            <img class='nenhuma-ref' src="{% static 'plataforma/img/frutas1.png'%}" alt="">
+            <h3 class='texto-ref'>🍽️ Nenhuma refeição adicionada <img class='nenhuma-ref' src="{% static 'plataforma/img/frutas1.png'%}" alt=""></h3> 
         {% else %}
             {% for re in refeicao %}
                 <div class="refeicao">
@@ -74,9 +73,7 @@
                                 <br>
                             {% endif %}
                         {% endfor %}
-
                     </div>
-
                 </div>
                 <br>
             {% endfor %}
