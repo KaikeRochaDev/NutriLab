@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 from django.contrib.messages import constants
 from decouple import config
+import whitenoise
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -128,6 +129,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
