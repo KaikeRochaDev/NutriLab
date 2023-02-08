@@ -1,7 +1,9 @@
 from django.urls import path
 from . import views
+from autenticacao.views import cadastro
 
 urlpatterns = [
+    path('', cadastro),
     path('pacientes/', views.pacientes, name='pacientes'),
     path('dados_paciente/', views.dados_paciente_listar, name="dados_paciente_listar"),
     path('dados_paciente/<str:id>/', views.dados_paciente, name="dados_paciente"),
