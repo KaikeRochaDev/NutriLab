@@ -15,7 +15,7 @@ from decouple import config
 def cadastro(request):
     if request.method == "GET":
         if request.user.is_authenticated:
-            return redirect('/paciente')
+            return redirect('/pacientes')
         return render(request, 'cadastro.html')
     elif request.method == "POST":
         username = request.POST.get('usuario')
