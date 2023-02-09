@@ -28,9 +28,15 @@ def cadastro(request):
             return redirect('/auth/cadastro')
 
         try:
-            user = User.objects.create_user(username=username, email=email, password=senha, is_active=True)
+            user = User.objects.create_user(username=username,
+                                            email=email,
+                                            password=senha,
+                                            is_active=True)
             user.save()
 
+            path_template = os.path.join(settings.BASE_DIR, 'autenticacao/templates/emails/cadastro_confirmado.html')
+            email_html(path_template, 'Cadastro confirmado', [email, 'kaikerocha74@gmail.com'], username=username)
+            
             messages.add_message(request, constants.SUCCESS, 'Usuário Cadastrado com sucesso')
             return redirect('/auth/logar')
         except:
