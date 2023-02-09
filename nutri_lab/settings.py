@@ -81,12 +81,8 @@ WSGI_APPLICATION = 'nutri_lab.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_nutrilab',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 # Password validation
@@ -145,9 +141,10 @@ MESSAGE_TAGS = {
     constants.WARNING: 'alert-warning',
 }
 
+DEFAULT_FROM_EMAIL='kaikerochadev@gmail.com'
 EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST_USER= 'kaikerochadev@gmail.com'
-EMAIL_HOST_PASSWORD= 'xfzfsisnqossshpm'
+EMAIL_HOST_USER='kaikerochadev@gmail.com'
+EMAIL_HOST_PASSWORD='lgpaewhjwsnodqwv'
 EMAIL_USE_TLS=True
-EMAIL_PORT =587
+EMAIL_PORT=587
 EMAIL_HOST='smtp.gmail.com'

@@ -11,6 +11,7 @@ from .models import Ativacao
 from hashlib import sha256
 from django.shortcuts import get_object_or_404
 from decouple import config
+from django.core.mail import send_mail
 
 def cadastro(request):
     if request.method == "GET":
@@ -25,21 +26,11 @@ def cadastro(request):
         
         if not password_is_valid(request, username, email, senha, confirmar_senha):
             return redirect('/auth/cadastro')
-               
+
         try:
-            user = User.objects.create_user(username=username,
-                                            email=email,
-                                            password=senha,
-                                            is_active=True)
+            user = User.objects.create_user(username=username, email=email, password=senha, is_active=True)
             user.save()
 
-            token = sha256(f"{username}{email}".encode()).hexdigest()
-            ativacao = Ativacao(token=token, user=user)
-            ativacao.save()
-
-            path_template = os.path.join(settings.BASE_DIR, 'autenticacao/templates/emails/cadastro_confirmado.html')
-            email_html(path_template, 'Cadastro confirmado', [email,], username=username, link_ativacao=f"127.0.0.1:8000/auth/ativar_conta/{token}")
-            
             messages.add_message(request, constants.SUCCESS, 'Usuário Cadastrado com sucesso')
             return redirect('/auth/logar')
         except:
