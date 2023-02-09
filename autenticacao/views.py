@@ -37,7 +37,7 @@ def cadastro(request):
             path_template = os.path.join(settings.BASE_DIR, 'autenticacao/templates/emails/cadastro_confirmado.html')
             email_html(path_template, 'Cadastro confirmado', [email, 'kaikerocha74@gmail.com'], username=username)
             
-            messages.add_message(request, constants.SUCCESS, 'Usuário Cadastrado com sucesso')
+            messages.add_message(request, constants.SUCCESS, 'Usuário cadastrado com sucesso')
             return redirect('/auth/logar')
         except:
             messages.add_message(request, constants.ERROR, 'Erro interno do sistema')
