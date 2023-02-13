@@ -3,31 +3,15 @@
 
   &#xa0;
 
-  <!-- <a href="https://nutri_lab.netlify.app">Demo</a> -->
+  <a href="https://nutrilab-krd.onrender.com">Demonstração do projeto</a>
 </div>
 
 <h1 align="center">Nutrilab</h1>
 
-<p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/KaikeRochaDev/nutri_lab?color=56BEB8">
-
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/KaikeRochaDev/nutri_lab?color=56BEB8">
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/KaikeRochaDev/nutri_lab?color=56BEB8">
-
-  <img alt="License" src="https://img.shields.io/github/license/KaikeRochaDev/nutri_lab?color=56BEB8">
-
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/nutri_lab?color=56BEB8" /> -->
-
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{YOUR_GITHUB_USERNAME}}/nutri_lab?color=56BEB8" /> -->
-
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{YOUR_GITHUB_USERNAME}}/nutri_lab?color=56BEB8" /> -->
-</p>
-
 <!-- Status -->
 
 <h4 align="center"> 
-	🚧 Nutri_lab 🚀 Em construção... 🚧
+	🚧 Nutri_lab 🚀 Em construção... 🚧 <br>
   (<strong>Quero implementar uma função onde o nutricionista consegue deletar pacientes que já estão criados</strong>)
 </h4> 
 
