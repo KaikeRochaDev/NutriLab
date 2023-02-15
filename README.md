@@ -27,11 +27,11 @@
 
 <br>
 
-## :dart: About ##
+## :dart: Sobre ##
 
 Site no qual nutricionistas gerenciam seus pacientes. 
 
-## :sparkles: Features ##
+## :sparkles: Características ##
 
 :heavy_check_mark: • Autenticação do usuário e envio de e-mails via HTML;\
 :heavy_check_mark: • Cadastro e Listagem dos pacientes.;\
@@ -39,7 +39,7 @@ Site no qual nutricionistas gerenciam seus pacientes.
 :heavy_check_mark: • Gráfico que mostra a evolução do paciente.;\
 :heavy_check_mark: • Definição de refeições para o paciente junto com os horários das refeições.;\
 
-## :rocket: Technologies ##
+## :rocket: Tecnologias ##
 
 As ferramentas que foram usadas neste projeto:
 
@@ -49,7 +49,7 @@ As ferramentas que foram usadas neste projeto:
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [Bootstrap](https://getbootstrap.com/)
 
-## :memo: License ##
+## :memo: Licença ##
 
 Este projeto está sob licença do MIT. Para obter mais detalhes, consulte o arquivo [LICENSE](LICENSE.md).
 
