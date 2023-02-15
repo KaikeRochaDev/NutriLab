@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'db_nutrilab',
         'USER': 'root',
         'PASSWORD': '',
-        'HOST': 'localhost',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }
