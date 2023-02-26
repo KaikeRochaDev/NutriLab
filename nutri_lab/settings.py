@@ -87,6 +87,9 @@ DATABASES = {
         'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
+        'OPTIONS': {
+            'read_default_file': '/var/run/mysqld/mysqld.sock',
+        }
     }
 }
 # Password validation
