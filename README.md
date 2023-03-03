@@ -8,12 +8,7 @@
 
 <h1 align="center">Nutrilab</h1>
 
-<!-- Status -->
-
-<h4 align="center"> 
-	🚧 Nutri_lab 🚀 Em construção... 🚧 <br>
-  (<strong>Quero implementar uma função onde o nutricionista consegue deletar pacientes que já estão criados</strong>)
-</h4> 
+<h3>OBS: Ao acessar o deploy, o site leva em cerca de 30 segundos para se iniciar, pois como não possuo um dominío próprio, o servidor fica desligado!</h3>
 
 <hr>
 
