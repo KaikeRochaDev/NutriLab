@@ -8,7 +8,7 @@
 
 <h1 align="center">Nutrilab</h1>
 
-<h4>OBS: Ao acessar o deploy, o site leva em cerca de 30 segundos para se iniciar, pois como não possuo um dominío próprio, o servidor fica desligado!</h4>
+<h5><strong>OBS</strong>: Ao acessar o deploy, o site leva em cerca de 30 segundos para se iniciar, pois como não possuo um dominío próprio, o servidor fica desligado!</h5>
 
 <hr>
 
